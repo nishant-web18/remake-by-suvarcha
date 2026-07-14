@@ -26,10 +26,10 @@ function Header() {
   }, []);
 
   useEffect(() => { setOpen(false); }, [location.pathname]);
-  const solid = scrolled || location.pathname !== "/";
+  const solid = true;
 
   return (
-    <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${solid ? "bg-background/95 backdrop-blur-xl border-b border-border/60 shadow-[0_4px_30px_-15px_rgba(60,30,20,0.2)]" : "bg-transparent border-b border-transparent"}`}>
+    <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 bg-background/95 backdrop-blur-xl ${scrolled ? "border-b border-border/60 shadow-[0_4px_30px_-15px_rgba(60,30,20,0.2)]" : "border-b border-transparent"}`}>
       <div className="max-w-7xl mx-auto px-5 md:px-10 h-20 flex items-center justify-between">
         <Link to="/" className="flex flex-col leading-none group shrink-0">
           <span className={`font-display italic text-[1.7rem] md:text-[1.9rem] transition-colors ${solid ? "text-brown" : "text-cream"}`} style={{ fontVariationSettings: '"opsz" 144' }}>Remake</span>
@@ -126,7 +126,7 @@ export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pt-20">
         <Outlet />
       </main>
       <Footer />

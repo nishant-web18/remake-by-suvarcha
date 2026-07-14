@@ -57,7 +57,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-0 md:px-10 pt-0 md:pt-10">
           <div className="relative rounded-none md:rounded-[2rem] overflow-hidden shadow-luxe bg-brown">
             <img src={hero} alt="Bridal makeup by Remake by Suvarcha" width={1600} height={1808}
-              className="w-full min-h-screen md:min-h-0 md:h-[86vh] object-cover object-top" />
+              className="w-full h-[80vh] md:h-[82vh] object-cover object-top" />
             <div className="absolute inset-0 bg-gradient-to-t from-brown via-brown/50 to-transparent" />
             <div className="absolute inset-0 flex flex-col justify-end px-5 pb-8 md:p-16">
               <motion.div 

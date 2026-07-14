@@ -29,7 +29,7 @@ export default function Contact() {
 
   return (
     <>
-      <section className="max-w-7xl mx-auto px-5 md:px-10 pt-28 md:pt-32 text-center">
+      <section className="max-w-7xl mx-auto px-5 md:px-10 pt-10 md:pt-16 text-center">
         <p className="eyebrow">Get in Touch</p>
         <h1 className="mt-4 text-5xl md:text-6xl text-brown">Let's plan your look</h1>
         <p className="mt-5 max-w-2xl mx-auto text-muted-foreground leading-relaxed">
