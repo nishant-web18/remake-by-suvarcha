@@ -26,12 +26,12 @@ function Header() {
   }, []);
 
   useEffect(() => { setOpen(false); }, [location.pathname]);
-  const solid = true;
+  const solid = scrolled || location.pathname !== "/";
 
   return (
-    <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 bg-background/90 backdrop-blur-xl ${scrolled ? "border-b border-border/60 shadow-[0_4px_30px_-15px_rgba(60,30,20,0.2)]" : "border-b border-transparent"}`}>
+    <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${solid ? "bg-background/95 backdrop-blur-xl border-b border-border/60 shadow-[0_4px_30px_-15px_rgba(60,30,20,0.2)]" : "bg-transparent border-b border-transparent"}`}>
       <div className="max-w-7xl mx-auto px-5 md:px-10 h-20 flex items-center justify-between">
-        <Link to="/" className="flex flex-col leading-none group">
+        <Link to="/" className="flex flex-col leading-none group shrink-0">
           <span className={`font-display italic text-[1.7rem] md:text-[1.9rem] transition-colors ${solid ? "text-brown" : "text-cream"}`} style={{ fontVariationSettings: '"opsz" 144' }}>Remake</span>
           <span className={`eyebrow text-[0.6rem] mt-0.5 tracking-[0.35em] transition-colors ${solid ? "text-brown/70" : "text-gold-soft"}`}>by Suvarcha</span>
         </Link>
@@ -45,7 +45,7 @@ function Header() {
           ))}
         </nav>
         <Link to="/contact" className={`hidden md:inline-flex text-xs tracking-[0.18em] uppercase items-center gap-2 px-6 py-3 rounded-full transition-all ${solid ? "bg-brown text-cream hover:bg-brown/90" : "bg-cream/95 text-brown hover:bg-cream"} shadow-soft`}>Book Now</Link>
-        <button className={`md:hidden p-2 transition-colors ${solid ? "text-brown" : "text-cream"}`} onClick={() => setOpen(v => !v)} aria-label="Menu">
+        <button className={`md:hidden p-2 transition-colors ${solid ? "text-brown" : "text-cream"} mix-blend-difference`} onClick={() => setOpen(v => !v)} aria-label="Menu">
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>

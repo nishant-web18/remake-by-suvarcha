@@ -60,13 +60,13 @@ export default function Home() {
               className="w-full h-[85vh] sm:h-[90vh] md:h-[86vh] object-cover object-top" />
             <div className="absolute inset-0 bg-gradient-to-t from-brown/95 via-brown/40 to-brown/10" />
             <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-brown/50 to-transparent" />
-            <div className="absolute inset-0 flex flex-col justify-end px-6 pb-[8.5rem] md:p-16">
+            <div className="absolute inset-0 flex flex-col justify-end px-6 pb-20 md:p-16">
               <motion.div 
                 initial="hidden" animate="visible" variants={fadeUp} 
-                className="max-w-2xl"
+                className="max-w-2xl w-full"
               >
                 <p className="eyebrow text-gold-soft">Pure Beauty · Real Artistry</p>
-                <h1 className="mt-4 text-cream text-5xl leading-[1.05] tracking-tight md:text-7xl md:leading-[1.02]">
+                <h1 className="mt-4 text-cream text-[2.75rem] leading-[1.05] tracking-tight md:text-7xl md:leading-[1.02] break-words">
                   Bridal Beauty,<br /><em className="text-gold-soft not-italic font-normal">Expertly Crafted.</em>
                 </h1>
                 <p className="mt-6 text-cream/85 text-lg max-w-lg leading-relaxed font-light">
@@ -148,7 +148,7 @@ export default function Home() {
           </div>
           <p className="text-muted-foreground max-w-md text-lg font-light pb-2">From bridal grandeur to intimate soirées — every look is designed to be uniquely yours.</p>
         </motion.div>
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={staggerContainer} className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={staggerContainer} className="mt-12 md:mt-16 grid gap-4 md:gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {services.map(s => (
             <motion.div variants={fadeUp} key={s.title} className="group rounded-[2rem] overflow-hidden bg-card shadow-soft hover:shadow-luxe transition-all duration-500 hover:-translate-y-2">
               <div className="aspect-[4/5] overflow-hidden">
@@ -166,11 +166,12 @@ export default function Home() {
       {/* WHY CHOOSE US */}
       <section className="mt-32 md:mt-40 bg-cream">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center max-w-2xl mx-auto">
-            <p className="eyebrow">Why Choose Us</p>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp} className="text-center max-w-2xl mx-auto">
+            <span className="eyebrow">Why Choose Us</span>
             <h2 className="mt-4 text-[2.75rem] leading-[1.1] md:text-5xl text-brown tracking-tight">Expert care, premium beauty</h2>
           </motion.div>
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={staggerContainer} 
+            className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
             {[
               { icon: Award, title: "Experienced Artist", desc: "Suvarcha brings years of professional bridal experience." },
               { icon: Sparkles, title: "Luxury Products", desc: "Only globally renowned, skin-safe premium brands." },
