@@ -55,18 +55,18 @@ export default function Home() {
       {/* HERO */}
       <section className="relative">
         <div className="max-w-7xl mx-auto px-0 md:px-10 pt-0 md:pt-10">
-          <div className="relative rounded-none md:rounded-[2rem] overflow-hidden shadow-luxe">
+          <div className="relative rounded-none md:rounded-[2rem] overflow-hidden shadow-luxe bg-brown">
             <img src={hero} alt="Bridal makeup by Remake by Suvarcha" width={1600} height={1808}
-              className="w-full h-[100svh] md:h-[86vh] object-cover object-top" />
+              className="w-full h-[85vh] sm:h-[90vh] md:h-[86vh] object-cover object-top" />
             <div className="absolute inset-0 bg-gradient-to-t from-brown/95 via-brown/40 to-brown/10" />
             <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-brown/50 to-transparent" />
-            <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-16 pb-24 md:pb-16">
+            <div className="absolute inset-0 flex flex-col justify-end px-6 pb-[8.5rem] md:p-16">
               <motion.div 
                 initial="hidden" animate="visible" variants={fadeUp} 
                 className="max-w-2xl"
               >
                 <p className="eyebrow text-gold-soft">Pure Beauty · Real Artistry</p>
-                <h1 className="mt-4 text-cream text-[3.25rem] leading-[1.05] tracking-tight md:text-7xl md:leading-[1.02]">
+                <h1 className="mt-4 text-cream text-5xl leading-[1.05] tracking-tight md:text-7xl md:leading-[1.02]">
                   Bridal Beauty,<br /><em className="text-gold-soft not-italic font-normal">Expertly Crafted.</em>
                 </h1>
                 <p className="mt-6 text-cream/85 text-lg max-w-lg leading-relaxed font-light">
