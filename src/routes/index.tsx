@@ -55,15 +55,12 @@ export default function Home() {
       {/* HERO */}
       <section className="relative">
         <div className="max-w-7xl mx-auto px-0 md:px-10 pt-0 md:pt-10">
-          <div className="relative rounded-none md:rounded-[2rem] overflow-hidden shadow-luxe bg-brown">
+          <div className="relative rounded-none md:rounded-[2rem] overflow-hidden shadow-luxe bg-brown min-h-[75vh] md:min-h-[82vh] flex flex-col justify-end">
             <img src={hero} alt="Bridal makeup by Remake by Suvarcha" width={1600} height={1808}
-              className="w-full h-[80vh] md:h-[82vh] object-cover object-top" />
+              className="absolute inset-0 w-full h-full object-cover object-top" />
             <div className="absolute inset-0 bg-gradient-to-t from-brown via-brown/50 to-transparent" />
-            <div className="absolute inset-0 flex flex-col justify-end px-5 pb-8 md:p-16">
-              <motion.div 
-                initial="hidden" animate="visible" variants={fadeUp} 
-                className="max-w-2xl w-full"
-              >
+            <div className="relative px-5 pb-8 pt-40 md:px-16 md:pb-16 md:pt-48">
+              <div className="max-w-2xl w-full fade-up">
                 <p className="eyebrow text-gold-soft text-[0.65rem] md:text-xs">Pure Beauty · Real Artistry</p>
                 <h1 className="mt-3 text-cream text-[2.25rem] leading-[1.08] tracking-tight md:text-7xl md:leading-[1.02]">
                   Bridal Beauty,<br /><em className="text-gold-soft not-italic font-normal">Expertly Crafted.</em>
@@ -79,7 +76,7 @@ export default function Home() {
                   <div className="flex">{[1,2,3,4,5].map(i => <Star key={i} size={14} className="fill-gold-soft text-gold-soft" />)}</div>
                   <span className="text-xs font-light tracking-wide">Trusted by 500+ happy brides</span>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </div>
