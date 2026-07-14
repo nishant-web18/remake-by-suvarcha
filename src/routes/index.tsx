@@ -57,28 +57,27 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-0 md:px-10 pt-0 md:pt-10">
           <div className="relative rounded-none md:rounded-[2rem] overflow-hidden shadow-luxe bg-brown">
             <img src={hero} alt="Bridal makeup by Remake by Suvarcha" width={1600} height={1808}
-              className="w-full h-[85vh] sm:h-[90vh] md:h-[86vh] object-cover object-top" />
-            <div className="absolute inset-0 bg-gradient-to-t from-brown/95 via-brown/40 to-brown/10" />
-            <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-brown/50 to-transparent" />
-            <div className="absolute inset-0 flex flex-col justify-end px-6 pb-20 md:p-16">
+              className="w-full min-h-screen md:min-h-0 md:h-[86vh] object-cover object-top" />
+            <div className="absolute inset-0 bg-gradient-to-t from-brown via-brown/50 to-transparent" />
+            <div className="absolute inset-0 flex flex-col justify-end px-5 pb-8 md:p-16">
               <motion.div 
                 initial="hidden" animate="visible" variants={fadeUp} 
                 className="max-w-2xl w-full"
               >
-                <p className="eyebrow text-gold-soft">Pure Beauty · Real Artistry</p>
-                <h1 className="mt-4 text-cream text-[2.75rem] leading-[1.05] tracking-tight md:text-7xl md:leading-[1.02] break-words">
+                <p className="eyebrow text-gold-soft text-[0.65rem] md:text-xs">Pure Beauty · Real Artistry</p>
+                <h1 className="mt-3 text-cream text-[2.25rem] leading-[1.08] tracking-tight md:text-7xl md:leading-[1.02]">
                   Bridal Beauty,<br /><em className="text-gold-soft not-italic font-normal">Expertly Crafted.</em>
                 </h1>
-                <p className="mt-6 text-cream/85 text-lg max-w-lg leading-relaxed font-light">
+                <p className="mt-4 text-cream/80 text-[0.95rem] md:text-lg max-w-lg leading-relaxed font-light">
                   Luxury makeup artistry by Suvarcha — designed for brides who value grace, precision, and unforgettable moments.
                 </p>
-                <div className="mt-10 flex flex-wrap gap-4">
-                  <Link to="/contact" className="btn-gold">Book Appointment <ArrowRight size={18} /></Link>
-                  <Link to="/gallery" className="btn-outline !border-cream !text-cream hover:!bg-cream hover:!text-brown">View Gallery</Link>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <Link to="/contact" className="btn-gold text-sm">Book Appointment <ArrowRight size={16} /></Link>
+                  <Link to="/gallery" className="btn-outline !border-cream/60 !text-cream text-sm hover:!bg-cream hover:!text-brown">View Gallery</Link>
                 </div>
-                <div className="mt-12 flex items-center gap-3 text-cream/90">
-                  <div className="flex">{[1,2,3,4,5].map(i => <Star key={i} size={16} className="fill-gold-soft text-gold-soft" />)}</div>
-                  <span className="text-sm font-light tracking-wide">Trusted by 500+ happy brides</span>
+                <div className="mt-6 flex items-center gap-2 text-cream/80">
+                  <div className="flex">{[1,2,3,4,5].map(i => <Star key={i} size={14} className="fill-gold-soft text-gold-soft" />)}</div>
+                  <span className="text-xs font-light tracking-wide">Trusted by 500+ happy brides</span>
                 </div>
               </motion.div>
             </div>
@@ -87,7 +86,7 @@ export default function Home() {
       </section>
 
       {/* INTRO / ABOUT */}
-      <section className="max-w-7xl mx-auto px-6 md:px-10 mt-28 md:mt-40 grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+      <section className="max-w-7xl mx-auto px-6 md:px-10 mt-20 md:mt-40 grid md:grid-cols-2 gap-12 md:gap-24 items-center">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp} className="relative order-2 md:order-1">
           <div className="grid grid-cols-2 gap-4">
             <img src={img4} alt="Makeup detail" loading="lazy" className="rounded-3xl aspect-[3/4] object-cover w-full shadow-soft" />

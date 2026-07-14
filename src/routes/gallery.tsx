@@ -41,7 +41,7 @@ export default function Gallery() {
   const [active, setActive] = useState<number | null>(null);
   return (
     <>
-      <section className="max-w-7xl mx-auto px-5 md:px-10 pt-16 md:pt-24 text-center">
+      <section className="max-w-7xl mx-auto px-5 md:px-10 pt-28 md:pt-32 text-center">
         <p className="eyebrow">Portfolio</p>
         <h1 className="mt-4 text-5xl md:text-6xl text-brown">The Gallery</h1>
         <p className="mt-5 max-w-2xl mx-auto text-muted-foreground leading-relaxed">

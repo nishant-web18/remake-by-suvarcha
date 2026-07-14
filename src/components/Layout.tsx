@@ -45,7 +45,7 @@ function Header() {
           ))}
         </nav>
         <Link to="/contact" className={`hidden md:inline-flex text-xs tracking-[0.18em] uppercase items-center gap-2 px-6 py-3 rounded-full transition-all ${solid ? "bg-brown text-cream hover:bg-brown/90" : "bg-cream/95 text-brown hover:bg-cream"} shadow-soft`}>Book Now</Link>
-        <button className={`md:hidden p-2 transition-colors ${solid ? "text-brown" : "text-cream"} mix-blend-difference`} onClick={() => setOpen(v => !v)} aria-label="Menu">
+        <button className={`md:hidden p-2 transition-colors ${solid ? "text-brown" : "text-cream"}`} onClick={() => setOpen(v => !v)} aria-label="Menu">
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -100,7 +100,7 @@ function Footer() {
 
 export function FloatingActions() {
   return (
-    <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-4">
+    <div className="fixed bottom-6 right-4 z-40 flex flex-col gap-3">
       <a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noreferrer"
         className="h-14 w-14 rounded-full bg-[#25D366]/90 backdrop-blur-md text-white grid place-items-center shadow-luxe hover:scale-110 hover:bg-[#25D366] transition-all duration-300"
         aria-label="WhatsApp">
@@ -126,7 +126,7 @@ export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 pt-20">
+      <main className="flex-1">
         <Outlet />
       </main>
       <Footer />
